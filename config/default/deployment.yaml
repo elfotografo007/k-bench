@@ -14,7 +14,7 @@ spec:
         app: hello-dep
     spec:
       containers:
-      - image: gcr.io/google-samples/hello-app:2.0
+      - image: gcr.io/projectsigstore/cosign:v1.2.1
         imagePullPolicy: Always
         name: hello-dep
         ports:
