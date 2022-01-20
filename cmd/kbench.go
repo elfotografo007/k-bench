@@ -23,16 +23,19 @@ import (
 	"fmt"
 	"k-bench/pkg/prometheus"
 	"k-bench/util"
-	"k8s.io/client-go/dynamic"
-	"k8s.io/client-go/kubernetes"
 	"os"
 	"os/signal"
 	"path/filepath"
 	"syscall"
 
+	"k8s.io/client-go/dynamic"
+	"k8s.io/client-go/kubernetes"
+	_ "k8s.io/client-go/plugin/pkg/client/auth"
+
 	log "github.com/sirupsen/logrus"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/util/homedir"
+
 	// Uncomment the following line to load the gcp plugin (only required to authenticate against GKE clusters).
 	// _ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 	// Uncomment the following line to load the oidc plugin (only required to authenticate with oidc to your kubernetes cluster).
